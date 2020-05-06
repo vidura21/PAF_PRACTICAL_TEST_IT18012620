@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.0.2
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: May 06, 2020 at 04:48 PM
+- Server version: 10.4.11-MariaDB
+- PHP Version: 7.4.4
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="paydetails" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="payments">
+                CREATE TABLE `payments` (
+                  `paymentID` int(6) NOT NULL AUTO_INCREMENT,
+                  `firstname` varchar(10) NOT NULL,
+                  `lastname` varchar(10) NOT NULL,
+                  `ammount` varchar(20) NOT NULL,
+                  `cardnumber` varchar(12) NOT NULL,
+                  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+                  `cvv` char(4) NOT NULL,
+                  PRIMARY KEY (`paymentID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'paydetails'
+    -->
+    <database name="paydetails">
+        <!-- Table payments -->
+        <table name="payments">
+            <column name="paymentID">41</column>
+            <column name="firstname">sahan</column>
+            <column name="lastname">perera</column>
+            <column name="ammount">6000.0</column>
+            <column name="cardnumber">789009873456</column>
+            <column name="date">2020-05-06 20:04:00</column>
+            <column name="cvv">909</column>
+        </table>
+        <table name="payments">
+            <column name="paymentID">42</column>
+            <column name="firstname">amal </column>
+            <column name="lastname">desilva </column>
+            <column name="ammount">8000.0</column>
+            <column name="cardnumber">789012345678</column>
+            <column name="date">2020-05-06 20:05:34</column>
+            <column name="cvv">567</column>
+        </table>
+    </database>
+</pma_xml_export>
